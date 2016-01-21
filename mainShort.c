@@ -45,6 +45,4 @@ int main() {
     // Print all options
     for(int i = 0; i < MAX; i++)
         displayLine(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
-
-    return 0;
 }
