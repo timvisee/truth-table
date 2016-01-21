@@ -4,7 +4,7 @@ A little program i wrote to test if my 'one-liner' is working correctly.
 Currently, i can only test my program with 4 ports. The idea is to make it so
 that you can test it with < x amount of ports.
 
-#Installation (OS X)
+#Installation (Unix & Linux)
 ```
 git clone https://github.com/nathanbakhuijzen/truth-table.git
 cd truth-table
