@@ -10,7 +10,7 @@
 const int MAX = 16;
 
 /**
- * Evaluate the circuit.
+ * Evaluate the the logic formula.
  *
  * @param a Input A.
  * @param b Input B.
@@ -19,21 +19,21 @@ const int MAX = 16;
  *
  * @return Result.
  */
-int evaluateCircuit(int a, int b, int c, int d) {
-    // insert your one-liner here.
+int evaluateLogic(int a, int b, int c, int d) {
+    // Insert your one-liner here.
     return !(!a && b || c || d) ? 1 : 0;
 }
 
 /**
- * Display the output an input set.
+ * Print an input set entry with it's corresponding output.
  *
  * @param a Input A.
  * @param b Input B.
  * @param c Input C.
  * @param d Input D.
  */
-void displayLine(int a, int b, int c, int d) {
-    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateCircuit(a, b, c, d));
+void printEntry(int a, int b, int c, int d) {
+    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateLogic(a, b, c, d));
 }
 
 /**
@@ -46,5 +46,5 @@ int main() {
     // Print all options
     int i;
     for(i = 0; i < MAX; i++)
-        displayLine(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
+        printEntry(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
 }
