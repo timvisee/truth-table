@@ -8,7 +8,7 @@ that you can test it with < x amount of ports.
 ```
 git clone https://github.com/nathanbakhuijzen/truth-table.git
 cd truth-table
-make && ./displaytable
+make && ./main
 ```
 
 Paste this into your terminal, done.
