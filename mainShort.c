@@ -9,10 +9,35 @@
  */
 const int MAX = 16;
 
-void displayLine(int a, int b, int c, int d);
+/**
+ * Evaluate the circuit.
+ *
+ * @param a Input A.
+ * @param b Input B.
+ * @param c Input C.
+ * @param d Input D.
+ *
+ * @return Result.
+ */
+int evaluateCircuit(int a, int b, int c, int d) {
+    return !(!a && b || c || d) ? 1 : 0;
+}
 
-int evaluateCircuit(int a, int b, int c, int d);
+/**
+ * Display the output an input set.
+ *
+ * @param a Input A.
+ * @param b Input B.
+ * @param c Input C.
+ * @param d Input D.
+ */
+void displayLine(int a, int b, int c, int d) {
+    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateCircuit(a, b, c, d));
+}
 
+/**
+ * Called on start.
+ */
 int main() {
     // Print the header
     printf("1 2 3 4   output\n");
@@ -22,12 +47,4 @@ int main() {
         displayLine(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
 
     return 0;
-}
-
-void displayLine(int a, int b, int c, int d) {
-    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateCircuit(a, b, c, d));
-}
-
-int evaluateCircuit(int a, int b, int c, int d) {
-    return !(!a && b || c || d) ? 1 : 0;
 }
