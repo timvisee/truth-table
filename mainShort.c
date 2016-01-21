@@ -4,16 +4,21 @@
 
 #include <stdio.h>
 
+/**
+ * The maximum value to loop to.
+ */
+const int MAX = 16;
+
 void displayLine(int a, int b, int c, int d);
 
 int evaluateCircuit(int a, int b, int c, int d);
 
 int main() {
-    int max = 16;
-
+    // Print the header
     printf("1 2 3 4   output\n");
 
-    for(int i = 0; i < max; i++)
+    // Print all options
+    for(int i = 0; i < MAX; i++)
         displayLine(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
 
     return 0;
