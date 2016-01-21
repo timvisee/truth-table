@@ -20,6 +20,7 @@ const int MAX = 16;
  * @return Result.
  */
 int evaluateCircuit(int a, int b, int c, int d) {
+    // insert your one-liner here.
     return !(!a && b || c || d) ? 1 : 0;
 }
 
