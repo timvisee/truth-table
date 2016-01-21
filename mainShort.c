@@ -6,6 +6,8 @@
 
 void displayLine(int a, int b, int c, int d);
 
+int evaluateCircuit(int a, int b, int c, int d);
+
 int main() {
     int max = 16;
     int i;
@@ -45,7 +47,9 @@ int main() {
 }
 
 void displayLine(int a, int b, int c, int d) {
-    int output = !((!a && b) || (c || d)) ? 1 : 0;
-    printf("%d %d %d %d   %d\n", a, b, c, d, output);
+    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateCircuit(a, b, c, d));
 }
 
+int evaluateCircuit(int a, int b, int c, int d) {
+    return !((!a && b) || (c || d)) ? 1 : 0;
+}
