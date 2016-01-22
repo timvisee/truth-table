@@ -20,7 +20,7 @@ const int MAX = 16;
  * @return Result.
  */
 int evaluateLogic(int a, int b, int c, int d) {
-    // Insert your one-liner here.
+    // TODO: Insert your one-liner here
     return !(!a && b || c || d) ? 1 : 0;
 }
 
