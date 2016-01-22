@@ -33,7 +33,11 @@ int evaluateLogic(int a, int b, int c, int d) {
  * @param d Input D.
  */
 void printEntry(int a, int b, int c, int d) {
-    printf("%d %d %d %d   %d\n", a, b, c, d, evaluateLogic(a, b, c, d));
+    // Evaluate the logic, and store the output
+    int out = evaluateLogic(a, b, c, d);
+
+    // Print the output with proper formatting
+    printf("%d %d %d %d   %d\n", a, b, c, d, out);
 }
 
 /**
