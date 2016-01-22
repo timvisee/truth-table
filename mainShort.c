@@ -40,11 +40,17 @@ void printEntry(int a, int b, int c, int d) {
  * Called on start.
  */
 int main() {
+    // Define an index variable
+    int i;
+
     // Print the header
     printf("1 2 3 4   output\n");
 
-    // Print all options
-    int i;
+    // Go through all the possible values
     for(i = 0; i < MAX; i++)
-        printEntry(i & 8 ? 1 : 0, i & 4 ? 1 : 0, i & 2 ? 1 : 0, i & 1);
+        // Determine the bit state at each position for all values
+        printEntry(i & 8 ? 1 : 0, // a bit, 1 or 0
+                   i & 4 ? 1 : 0, // b bit, 1 or 0
+                   i & 2 ? 1 : 0, // c bit, 1 or 0
+                   i & 1);        // d bit, 1 or 0
 }
