@@ -47,17 +47,21 @@ void printEntry(int in[]) {
  * Called on start.
  */
 int main() {
-    // Define an index variable
-    int i;
+    // Define the input array and two index variables
+    int in[BIT_COUNT],
+        entryIndex,
+        bitIndex;
 
-    // Print the header
-    printf("1 2 3 4   output\n");
+    // Print the header; the header numbers first, followed by the output string
+    for(entryIndex = 0; entryIndex < BIT_COUNT; entryIndex++)
+        printf("%d ", entryIndex + 1);
+    printf("  output\n");
 
     // Go through all the possible values
-    for(i = 0; i < MAX; i++)
+    for(entryIndex = 0; entryIndex < MAX; entryIndex++)
         // Determine the bit state at each position for all values
-        printEntry(i & 8 ? 1 : 0, // a bit, 1 or 0
-                   i & 4 ? 1 : 0, // b bit, 1 or 0
-                   i & 2 ? 1 : 0, // c bit, 1 or 0
-                   i & 1);        // d bit, 1 or 0
+        printEntry(entryIndex & 8 ? 1 : 0, // a bit, 1 or 0
+                   entryIndex & 4 ? 1 : 0, // b bit, 1 or 0
+                   entryIndex & 2 ? 1 : 0, // c bit, 1 or 0
+                   entryIndex & 1);        // d bit, 1 or 0
 }
