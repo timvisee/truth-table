@@ -8,7 +8,7 @@
 /**
  * The number of bits used by the logic as input.
  */
-const unsigned int BIT_COUNT = 5;
+const unsigned int BIT_COUNT = 4;
 
 /**
  * The maximum value to evaluate.
