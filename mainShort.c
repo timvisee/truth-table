@@ -30,17 +30,17 @@ int evaluateLogic(int in[]) {
 /**
  * Print an input set entry with it's corresponding output.
  *
- * @param a Input A.
- * @param b Input B.
- * @param c Input C.
- * @param d Input D.
+ * @param in An integer array of the input bits.
  */
-void printEntry(int a, int b, int c, int d) {
-    // Evaluate the logic, and store the output
-    int out = evaluateLogic(a, b, c, d);
+void printEntry(int in[]) {
+    // Evaluate the logic, store the result and define an index variable
+    int out = evaluateLogic(in),
+              i;
 
-    // Print the output with proper formatting
-    printf("%d %d %d %d   %d\n", a, b, c, d, out);
+    // Print all input bits followed by the output value
+    for(i = 0; i < BIT_COUNT; i++)
+        printf("%d ", in[i]);
+    printf("  %d\n", out);
 }
 
 /**
