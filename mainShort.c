@@ -5,9 +5,15 @@
 #include <stdio.h>
 
 /**
- * The maximum value to loop to.
+ * The number of bits used by the logic as input.
  */
-const int MAX = 16;
+const unsigned int BIT_COUNT = 5;
+
+/**
+ * The maximum value to evaluate.
+ * If this constant is set to -1, all possible values will be evaluated.
+ */
+const int MAX = -1;
 
 /**
  * Evaluate the the logic formula.
