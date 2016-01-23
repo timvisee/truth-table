@@ -11,7 +11,7 @@
 const unsigned int BIT_COUNT = 4;
 
 /**
- * The maximum value to evaluate.
+ * The maximum value to evaluate. The maximum value is included in the value set.
  * If this constant is set to -1, all possible values will be evaluated.
  */
 const int MAX = -1;
@@ -56,7 +56,7 @@ int main() {
 
     // Calculate the maximum value if not specified
     if(max == -1)
-        max = (int) pow(2, BIT_COUNT);
+        max = (int) pow(2, BIT_COUNT) - 1;
 
     // Print the header; the header numbers first, followed by the output string
     for(entryIndex = 0; entryIndex < BIT_COUNT; entryIndex++)
@@ -64,7 +64,7 @@ int main() {
     printf("  output\n");
 
     // Go through all the possible values
-    for(entryIndex = 0; entryIndex < max; entryIndex++) {
+    for(entryIndex = 0; entryIndex <= max; entryIndex++) {
         // Build the input set with the proper bits based on the selected value
         for(bitIndex = 0; bitIndex < BIT_COUNT; bitIndex++) {
             // Calculate the exponent of the current bit position
