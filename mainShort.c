@@ -3,6 +3,7 @@
  */
 
 #include <stdio.h>
+#include <math.h>
 
 /**
  * The number of bits used by the logic as input.
