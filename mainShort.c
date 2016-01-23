@@ -18,16 +18,13 @@ const int MAX = -1;
 /**
  * Evaluate the the logic formula.
  *
- * @param a Input A.
- * @param b Input B.
- * @param c Input C.
- * @param d Input D.
+ * @param in An integer array of the input bits.
  *
  * @return Result.
  */
-int evaluateLogic(int a, int b, int c, int d) {
+int evaluateLogic(int in[]) {
     // TODO: Insert your one-liner here
-    return !(!a && b || c || d) ? 1 : 0;
+    return !(!in[0] && in[1] || in[2] || in[3]) ? 1 : 0;
 }
 
 /**
