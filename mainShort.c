@@ -48,10 +48,15 @@ void printEntry(int in[]) {
  * Called on start.
  */
 int main() {
-    // Define the input array and two index variables
+    // Define the input array, two index variables and a variable that contains the maximum value
     int in[BIT_COUNT],
         entryIndex,
-        bitIndex;
+        bitIndex,
+        max = MAX;
+
+    // Calculate the maximum value if not specified
+    if(max == -1)
+        max = (int) pow(2, BIT_COUNT);
 
     // Print the header; the header numbers first, followed by the output string
     for(entryIndex = 0; entryIndex < BIT_COUNT; entryIndex++)
@@ -59,7 +64,7 @@ int main() {
     printf("  output\n");
 
     // Go through all the possible values
-    for(entryIndex = 0; entryIndex < MAX; entryIndex++) {
+    for(entryIndex = 0; entryIndex < max; entryIndex++) {
         // Build the input set with the proper bits based on the selected value
         for(bitIndex = 0; bitIndex < BIT_COUNT; bitIndex++) {
             // Calculate the exponent of the current bit position
