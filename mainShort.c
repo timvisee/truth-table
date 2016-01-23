@@ -58,7 +58,17 @@ int main() {
     printf("  output\n");
 
     // Go through all the possible values
-    for(entryIndex = 0; entryIndex < MAX; entryIndex++)
+    for(entryIndex = 0; entryIndex < MAX; entryIndex++) {
+        // Build the input set with the proper bits based on the selected value
+        for(bitIndex = 0; bitIndex < BIT_COUNT; bitIndex++) {
+            // Calculate the exponent of the current bit position
+            int exp = (int) pow(2, BIT_COUNT - bitIndex - 1);
+
+            // Determine the current bit value
+            in[bitIndex] = entryIndex & exp ? 1 : 0;
+        }
+
         // Evaluate the logic and print the result with the built input set
         printEntry(in);
+    }
 }
