@@ -59,9 +59,6 @@ int main() {
 
     // Go through all the possible values
     for(entryIndex = 0; entryIndex < MAX; entryIndex++)
-        // Determine the bit state at each position for all values
-        printEntry(entryIndex & 8 ? 1 : 0, // a bit, 1 or 0
-                   entryIndex & 4 ? 1 : 0, // b bit, 1 or 0
-                   entryIndex & 2 ? 1 : 0, // c bit, 1 or 0
-                   entryIndex & 1);        // d bit, 1 or 0
+        // Evaluate the logic and print the result with the built input set
+        printEntry(in);
 }
